@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/external-rabit-jes-outline-color-rabit-jes/16/000000/external-world-navigation-and-maps-rabit-jes-outline-color-rabit-jes.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/countryPreview.css" />
+    <title>REST Countries API</title>
+  </head>
+  <body>
+    <div id="preloader"></div>
+    <main>
+      <div class="navbar">
+        <div class="navbar-Container">
+          <div class="navbar-title">Where in the world?</div>
+          <div class="navbar-darkMode">
+            <img
+              src="https://img.icons8.com/sf-regular/22/000000/moon-symbol.png"
+              id="dark-moon"
+            />
+            <p class="darkMode">Dark Mode</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="body">
+        <div class="body-top">
+          <div class="search-bar filterSearch">
+            <img
+              src="https://img.icons8.com/fluency-systems-filled/18/737373/search.png"
+              alt="search icon"
+              class="search-Icon"
+            />
+            <input
+              type="search"
+              id="search"
+              data-search
+              placeholder="Search for a country.."
+            />
+          </div>
+          <div class="filter-items">
+            <div class="dropdown">
+              <button class="dropdownBtn filterSearch">Filter by Region</button>
+              <div id="mydropdown" class="dropdown-Content hide">
+                <p class="c-Region">All</p>
+                <p class="c-Region">Africa</p>
+                <p class="c-Region">America</p>
+                <p class="c-Region">Asia</p>
+                <p class="c-Region">Europe</p>
+                <p class="c-Region">Oceania</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="countries-wrapper">
+        <div class="countries" data-countries-container></div>
+        <button id="loadMore">Load More...</button>
+        <div class="all show">
+          <button class="back">
+            <img
+              src="https://img.icons8.com/material-sharp/14/000000/long-arrow-left.png"
+              alt=""
+              class="back-Arrow"
+            />
+            Back
+          </button>
+          <div class="countryModel"></div>
+        </div>
+
+        <template data-user-template>
+          <div class="country">
+            <img src="" alt="flag" class="country-flag" />
+            <div class="country-history">
+              <h2 class="country-name"></h2>
+              <div class="country-info">
+                <p>Population: <span class="population"></span></p>
+                <p class="regionName">Region:<span class="region"></span></p>
+                <p>Capital: <span class="capital"></span></p>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </main>
+    <script src="./javaScript/app.js"></script>
+  </body>
+</html>

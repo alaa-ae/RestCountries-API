@@ -1,0 +1,89 @@
+.all {
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  width: 100vw;
+  background-color: hsl(0, 0%, 98%);
+  overflow-x: hidden;
+}
+
+.dark .all {
+  background-color: rgb(32, 44, 55);
+  color: var(--White);
+}
+
+.back {
+  display: flex;
+  font-size: 1rem;
+  margin: 2rem 3rem 3.5rem;
+  margin-left: 3.6rem;
+  padding: .5rem 1.6rem;
+  color: hsl(207, 26%, 17%);
+  background-color: hsl(0, 0%, 100%);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 9px 1px rgba(133, 133, 133, 0.75);
+  -webkit-box-shadow: 0px 0px 9px 1px rgba(133, 133, 133, 0.75);
+  -moz-box-shadow: 0px 0px 9px 1px rgba(133, 133, 133, 0.75);
+}
+
+.dark .back {
+  background-color: var(--Dark-Blue);
+  box-shadow: 0px 3px 17px -8px black;
+  -webkit-box-shadow: 0px 3px 17px -8px black;
+  -moz-box-shadow: 0px 3px 17px -8px black;
+  color: white;
+}
+
+.back:hover {
+  opacity: 0.7;
+}
+
+.back-Arrow {
+  padding-right: .3rem;
+}
+
+.flag {
+  height: 280px;
+  width: 100%;
+  text-align: center;
+}
+
+.countryName {
+  margin: 1.5rem 0;
+}
+
+.show {
+  display: none;
+}
+
+@media (min-width:760px) {
+  .flag {
+    height: 350px;
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .model {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .rightModel {
+    width: 40%;
+  }
+
+  .countryPreview {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .innerRight {
+    margin-top: 2.8rem;
+  }
+
+}
